@@ -1,4 +1,6 @@
-# Code files for RIT 2235 CSCI-605 course, section 1
+# Code files for RIT CSCI-605 course
+
+# previous years are in branches, main branch is the current term
 
 --Eduardo
-eduardo.lima AT mail.rit.edu
+ima AT cs.rit.edu
