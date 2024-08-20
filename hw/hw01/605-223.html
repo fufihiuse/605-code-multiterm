@@ -1,0 +1,230 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Fri Aug  2 10:52:41 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-223.html</title>
+
+</head>
+
+
+<b><font size="+1">21.5. Homework 1.2 (10 Points)</font>
+<a name="21.5. Homework 1.2 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Designing and
+implementing an algorithm and design a testing strategy.</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">Given is a set of objects which
+must be loaded on a plane. Each object has a volume and a
+weight. The airplane has a limited space but can carry
+unlimited weight. Find the set of objects which:</p>
+
+<p style="margin-top: 1em">&bull; uses as much available
+volume as possible</p>
+
+<p style="margin-top: 1em">&bull; and has the maximum
+weight.</p>
+
+<p style="margin-top: 1em">An example would be:</p>
+
+<pre style="margin-top: 1em">% java Plane
+maximal useable volume: 3
+Objects available:
+    position: 0:    volume: 2
+            weight: 1
+    position: 1:    volume: 1
+            weight: 2
+    position: 2:    volume: 2
+            weight: 2
+Best Solution:  volume: 3   weight: 4
+Objects used: (id/weight):
+Postions start at 0
+    position:  1: 1/2
+    position:  2: 2/2</pre>
+
+
+<p style="margin-top: 1em">An other example would be:</p>
+
+<p style="margin-top: 1em">You can select which solution to
+print, if there are two solution with identical volume and
+weight.</p>
+
+<p style="margin-top: 1em"><b>Your Work:</b></p>
+
+<p style="margin-top: 1em">Your work is to design and
+implement an algorithm to solve the problem.</p>
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">Let&rsquo;s assume the
+<i>maximumVolume</i> is the maximum available space.</p>
+
+<p style="margin-top: 1em">A approach you could
+calculate:</p>
+
+
+<p align="center" style="margin-top: 1em"><img src="https://www.cs.rit.edu/~hpb/Lectures/2241/605/605/60525.png" alt="Image 605/60525.png"></p>
+
+
+<p align="center" style="margin-top: 1em"><img src="https://www.cs.rit.edu/~hpb/Lectures/2241/605/605/60526.png" alt="Image 605/60526.png"></p>
+
+
+<p align="center" style="margin-top: 1em"><img src="https://www.cs.rit.edu/~hpb/Lectures/2241/605/605/60527.png" alt="Image 605/60527.png"></p>
+
+
+<p align="center" style="margin-top: 1em"><img src="https://www.cs.rit.edu/~hpb/Lectures/2241/605/605/60528.png" alt="Image 605/60528.png"></p>
+
+<p style="margin-top: 1em">The solution will be the last or
+first element, depending on your sorting order.</p>
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">&bull; Lets assume whe have the
+following set: {a, b}. All possible combinations are: {},
+{a}, {b}, {a b}.</p>
+
+<p style="margin-top: 1em">&bull; This code snippet can
+serve as a starting point for your solution:</p>
+
+<pre style="margin-top: 1em"> 1      public class Plane {
+ 2          static int[] myVolumes              = { 2, 1, 2 };
+ 3          static int[] myWeights              = { 1, 2, 2 };
+ 4          static int soManyObjects            = myVolumes.length;
+ 5          static int maximumVolume            = 3;
+ 6
+ 7          public static void printWhatWeHaveToWorkWith() {
+ 8              System.out.println(&quot;maximal useable volume: &quot; + maximumVolume);
+ 9              System.out.println(&quot;Objects available: &quot;);
+10              for ( int index = 0; index &lt; soManyObjects; index ++ )  {
+11                      System.out.println(&quot;\tposition: &quot; + index + &quot;:\t&quot; +
+12                                      &quot;volume:        &quot; +  myVolumes[index] + &quot;\n\t\t\t&quot; +
+13                                      &quot;weight:        &quot; +  myWeights[index] );
+14              }
+15
+16          }
+17          public static void main( String[] arguments ) {
+18              printWhatWeHaveToWorkWith();
+19          }
+20      }</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/21/Plane.java">Src/21/Plane.java</a></p>
+
+<p style="margin-top: 1em">Execution of the program:</p>
+
+<pre style="margin-top: 1em">javac Plane.java
+java Plane
+maximal useable volume: 3
+Objects available:
+    position: 0:    volume: 2
+            weight: 1
+    position: 1:    volume: 1
+            weight: 2
+    position: 2:    volume: 2
+            weight: 2</pre>
+
+
+<p style="margin-top: 1em">Your output does not have to be
+identical to mine, but similar.</p>
+
+<p style="margin-top: 1em"><b>Requirements:</b></p>
+
+<p style="margin-top: 1em">&bull; You have to name the file
+<i>Plane.java</i>.</p>
+
+<p style="margin-top: 1em">&bull; You cannot use any Java
+functionality besides System.out.</p>
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">&bull; Design your algorithm on
+paper</p>
+
+<p style="margin-top: 1em">&bull; Run your algorithm by
+hand</p>
+
+<p style="margin-top: 1em">&bull; Only if you are sure it
+works, implement it</p>
+
+<p style="margin-top: 1em"><b>Submission:</b></p>
+
+<p style="margin-top: 1em">You have to submit a text file
+for each parts of the hw (1, 2, 3) named
+&rsquo;addition.txt&rsquo; with the following
+information:</p>
+
+<p style="margin-top: 1em">&bull; Describe the main problem
+you saw.</p>
+
+<p style="margin-top: 1em">&bull; Describe the main idea
+behind your solution.</p>
+
+<p style="margin-top: 1em">&bull; Add comment to the code
+if you made assumption about the write-up of the hw.</p>
+
+<p style="margin-top: 1em">&bull; Descripe your test cases,
+if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe the edge cases
+you tested, if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe all ways your
+program can be executed.</p>
+
+<p style="margin-top: 1em">&bull; You need to disclose if
+you have used generative AI. In other words, you have to
+identify code wich was generated by generative AI. Failing
+to do so will result in a &rsquo;F&rsquo; grade for the
+course.</p>
+
+<p style="margin-top: 1em">Utilize myCourses for file
+submissions, and note that each team is allowed only one
+submission. Your solutions should be submitted in a
+compressed &rsquo;gzip&rsquo;ed jar file format.
+Here&rsquo;s an example of how to create and compress such a
+file:</p>
+
+<pre style="margin-top: 1em">% jar cvf h1.jar NumberEqualCube.java LongestCommonDNAsegment.java Coins.java # c: create, v verbose, f file
+added manifest
+adding: NumberEqualCube.java(in = 1088) (out= 468)(deflated 56%)
+adding: LongestCommonDNAsegment.java(in = 2216) (out= 692)(deflated 68%)
+adding: Coins.java(in = 2623) (out= 884)(deflated 66%)
+% # followd by using gzip to compress your file.
+% gzip h1.jar</pre>
+
+
+<p style="margin-top: 1em">Please ensure that the suffix of
+your file matches the specified format. The file should have
+a prefix &rsquo;h&rsquo; followed by the number of the
+homework. For instance, if you are submitting the solution
+for homework 5, the file name has to be h5.jar.</p>
+
+<p style="margin-top: 1em"><b>You will receive 0 points for
+your submission, if you use a format different than
+jar.</b></p>
+<hr size=4>
