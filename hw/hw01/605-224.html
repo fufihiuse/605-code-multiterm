@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Aug  2 10:52:41 2024 -->
+<!-- CreationDate: Sat Aug 24 17:41:25 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -59,7 +59,7 @@ program which can sort numbers. The created program is:</p>
 16          }
 17
 18          public static void quickSort(int[] array, int low, int high) {
-19              if (low &lt; high) {
+19              if (low &lt;= high) {
 20                  int pivotIndex = partition(array, low, high);
 21                  quickSort(array, low, pivotIndex - 1);
 22                  quickSort(array, pivotIndex + 1, high);
@@ -70,7 +70,7 @@ program which can sort numbers. The created program is:</p>
 27              int pivot = array[high];
 28              int i = low - 1;
 29              for (int j = low; j &lt; high; j++) {
-30                  if (array[j] &lt; pivot) {
+30                  if (array[j] &lt;= pivot) {
 31                      i++;
 32                      int temp = array[i];
 33                      array[i] = array[j];
@@ -119,7 +119,7 @@ or less numbers are left to sort.</p>
 <p style="margin-top: 1em"><b>Requirements:</b></p>
 
 <p style="margin-top: 1em">&bull; You have to name your
-program uickSort.java</p>
+program <i>QuickSort.java</i></p>
 
 <p style="margin-top: 1em">&bull; Modify the code as
 requested.</p>
@@ -160,18 +160,16 @@ course.</p>
 
 <p style="margin-top: 1em">Utilize myCourses for file
 submissions, and note that each team is allowed only one
-submission. Your solutions should be submitted in a
-compressed &rsquo;gzip&rsquo;ed jar file format.
+submission. Your solutions should be submitted in a jar file
+format and containing the java classes and associated files.
 Here&rsquo;s an example of how to create and compress such a
 file:</p>
 
-<pre style="margin-top: 1em">% jar cvf h1.jar NumberEqualCube.java LongestCommonDNAsegment.java Coins.java # c: create, v verbose, f file
+<pre style="margin-top: 1em">% jar cvf h1.jar Celtic.class Celtic.java addition.txt
 added manifest
-adding: NumberEqualCube.java(in = 1088) (out= 468)(deflated 56%)
-adding: LongestCommonDNAsegment.java(in = 2216) (out= 692)(deflated 68%)
-adding: Coins.java(in = 2623) (out= 884)(deflated 66%)
-% # followd by using gzip to compress your file.
-% gzip h1.jar</pre>
+adding: Celtic.class(in = 1989) (out= 1113)(deflated 44%)
+adding: Celtic.java(in = 2650) (out= 943)(deflated 64%)
+adding: addition.txt(in = 4639) (out= 1998)(deflated 56%)</pre>
 
 
 <p style="margin-top: 1em">Please ensure that the suffix of
