@@ -1,0 +1,263 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Sep  4 11:37:26 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-227.html</title>
+
+</head>
+
+
+<b><font size="+1">22.1. Homework 2.1 (10 Points)</font>
+<a name="22.1. Homework 2.1 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Designing and
+implementing an algorithm and design a testing strategy.</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">Implement the game
+<a href="https://www.nytimes.com/games/wordle/index.html">Wordle.</a></p>
+
+<p style="margin-top: 1em">Your implementation has to use
+the following code:</p>
+
+<pre style="margin-top: 1em"> 1      import java.io.*;
+ 2      import java.util.Random;
+ 3      import java.util.Scanner;
+ 4
+ 5
+ 6
+ 7      public class Wordle {
+ 8          static String inputFileName = &quot;knownWords.txt&quot;;
+ 9          static String[] theWords;
+10          static final Scanner readGuess = new Scanner(System.in);
+11
+12          public static void printAllWords(String [] theWords) {
+13              System.out.println(&quot;========&quot;);
+14              for ( int index = 0; index &lt;   theWords.length; index ++ )
+15                      System.out.println(theWords[index]);
+16              System.out.println(&quot;========&quot;);
+17          }
+18          public static int readWordsFromFile(String theFileName, boolean countOnly) {
+19              Scanner inputStream  = null;
+20              int soManyLines = 0;
+21              try {
+22                      inputStream  = new Scanner(new File(theFileName) );
+23              } catch ( FileNotFoundException e ) {}
+24              while ( inputStream.hasNext() ) {
+25
+26                      String aString = inputStream.next();
+27                      if ( !  countOnly )
+28                              theWords[soManyLines] = aString;
+29                      soManyLines ++;
+30              }
+31              inputStream.close();
+32              return soManyLines;
+33          }
+34          public static String readUserInput(int rounds) {
+35              String theGuess = &quot;&quot;;
+36              System.out.print(rounds + &quot; &gt; &quot;);
+37              if  ( readGuess.hasNext() )     {
+38                      theGuess = readGuess.nextLine();
+39              }
+40              // check for correct length of word
+41
+42              return theGuess;
+43          }
+44          public static String getWord() {
+45              retun null;
+46          }
+47
+48          public static void printIntro() {
+49              System.out.println(&quot;_ indicates the letter is in the word but in the wrong spot.&quot;);
+50              System.out.println(&quot;* indicates the letter is in the word and correct spot.&quot;);
+51              System.out.println(&quot;x indicates the letter is not in the word.&quot;);
+52              System.out.println(&quot;Try to guess the word in 5 tries.&quot;);
+53          }
+54          public static void playWordle() {
+55              printIntro();
+56              // your code here
+57          }
+58          public static void playOneRound(String guessThisWord) {
+59              // your code here
+60          }
+61
+62          public static void test()   {
+63              printAllWords(theWords);
+64              // theWords = deleteWord(&quot;abcde&quot;);
+65              printAllWords(theWords);
+66              // theWords = deleteWord(&quot;abcdf&quot;);
+67              printAllWords(theWords);
+68          }
+69          public static void main( String args[] ) {
+70              playWordle();
+71          }
+72      }</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/22/Wordle.java">Src/22/Wordle.java</a></p>
+
+<p style="margin-top: 1em">The possible test file could
+be:</p>
+
+<pre style="margin-top: 1em"> 1      adieu
+ 2      boxer</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/22/knowWords.txt">Src/22/knowWords.txt</a></p>
+
+<p style="margin-top: 1em">An execution of a possible
+solution looks like:</p>
+
+<pre style="margin-top: 1em">java Wordle
+_ indicates the letter is in the word but in the wrong spot.
+* indicates the letter is in the word and correct spot.
+x indicates the letter is not in the word.
+Try to guess the word in 5 tries.
+    xxxxx
+1 &gt; box12
+    xxxxx
+2 &gt; boxer
+    xxxex
+3 &gt; adieu
+adieu was guessed correctly after 3 guesses.
+    xxxxx
+1 &gt; boxer
+boxer was guessed correctly after 1 guesses.
+spiegel.cs.rit.edu 22 94 java Wordle
+_ indicates the letter is in the word but in the wrong spot.
+* indicates the letter is in the word and correct spot.
+x indicates the letter is not in the word.
+Try to guess the word in 5 tries.
+    xxxxx
+1 &gt; 123
+This game is played with words of length 5 and not 3.</pre>
+
+
+<p style="margin-top: 1em">A few requirements must be
+considered:</p>
+
+<p style="margin-top: 1em">&bull; The user guess needs to
+be 5 character long. The user guess can contain characters,
+numbers, etc. The program must terminate if the user guess
+is not 5 characters long.</p>
+
+<p style="margin-top: 1em">&bull; The file containing the
+words to guess cannot have any duplicates. The program must
+terminate if the file containing the words has
+duplicates.</p>
+
+<p style="margin-top: 1em">&bull; Your program cannot
+assume the # of words in the words to guess file. In other
+words, you cannot hard code the length of the array which is
+used to stores the words to guess.</p>
+
+<p style="margin-top: 1em">&bull; For every round a random
+word for the words to guess has to be selected and removed
+from the list of the words to guess.</p>
+
+<p style="margin-top: 1em">&bull; You cannot convert a
+string to an array.</p>
+
+<p style="margin-top: 1em">&bull; Only methods provided in
+the example of methods from the
+<a href="https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/lang/String.html">string class</a></p>
+
+<p style="margin-top: 1em">&bull; You have to document
+additional assumptions you made.</p>
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">&bull; Design your algorithm on
+paper</p>
+
+<p style="margin-top: 1em">&bull; Run your algorithm by
+hand</p>
+
+<p style="margin-top: 1em">&bull; Only if you are sure it
+works, implement it</p>
+
+<p style="margin-top: 1em"><b>Submission:</b></p>
+
+<p style="margin-top: 1em">You have to submit a text file
+for each parts of the hw (1, 2, 3) named
+&rsquo;addition.txt&rsquo; with the following
+information:</p>
+
+<p style="margin-top: 1em">&bull; Describe the main problem
+you saw.</p>
+
+<p style="margin-top: 1em">&bull; Describe the main idea
+behind your solution.</p>
+
+<p style="margin-top: 1em">&bull; Add comment to the code
+if you made assumption about the write-up of the hw.</p>
+
+<p style="margin-top: 1em">&bull; Descripe your test cases,
+if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe the edge cases
+you tested, if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe all ways your
+program can be executed.</p>
+
+<p style="margin-top: 1em">&bull; You need to disclose if
+you have used generative AI. In other words, you have to
+identify code wich was generated by generative AI. Failing
+to do so will result in a &rsquo;F&rsquo; grade for the
+course.</p>
+
+<p style="margin-top: 1em">Utilize myCourses for file
+submissions, and note that each team is allowed only one
+submission. Your solutions should be submitted in a
+compressed jar file format and containing the java classes
+and associated files. Here&rsquo;s an example of how to
+create and compress such a file:</p>
+
+<pre style="margin-top: 1em">% jar cvf h1.jar Celtic.class Celtic.java addition.txt
+added manifest
+adding: Celtic.class(in = 1989) (out= 1113)(deflated 44%)
+adding: Celtic.java(in = 2650) (out= 943)(deflated 64%)
+adding: addition.txt(in = 4639) (out= 1998)(deflated 56%)
+% gzip -fv h1.jar
+h1.jar:         3.1% -- replaced with h1.jar.gz
+   #  -f --force           force overwriting &amp; compress links
+   #  -v --verbose         print extra statistics</pre>
+
+
+<p style="margin-top: 1em">Please ensure that the suffix of
+your file matches the specified format. The file should have
+a prefix &rsquo;h&rsquo; followed by the number of the
+homework. For instance, if you are submitting the solution
+for homework 5, the file name has to be h5.jar.</p>
+
+<p style="margin-top: 1em"><b>You will receive 0 points for
+your submission, if you use a format different than
+jar.</b></p>
+<hr size=4>

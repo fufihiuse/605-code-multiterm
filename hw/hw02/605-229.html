@@ -1,0 +1,149 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Sep  4 11:37:26 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-229.html</title>
+
+</head>
+
+
+<b><font size="+1">22.3. Homework 2.3 (10 Points)</font>
+<a name="22.3. Homework 2.3 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Creating and
+implementing test cases for a ChatGPT created algorithm.</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">ChatGPT was asked to create a
+program which can print all subset of a given set of
+numbers. The created program is:</p>
+
+<pre style="margin-top: 1em"> 1      /*
+ 2       * Write a recursive  algorithm in java which produces all subsets of n numbers using only java basic type
+ 3       */
+ 4
+ 5      public class Subsets {
+ 6
+ 7          public static void main(String[] args) {
+ 8              int[] nums = {1, 2, 3};
+ 9              int[] subset = new int[nums.length];
+10              generateSubsets(nums, subset, 0);
+11          }
+12
+13          public static void generateSubsets(int[] nums, int[] subset, int index) {
+14              if (index == nums.length) {
+15                  printSubset(subset, index);
+16                  return;
+17              }
+18
+19              subset[index] = 0;
+20              generateSubsets(nums, subset, index + 1);
+21
+22              subset[index] = nums[index];  // include this element
+23              generateSubsets(nums, subset, index + 1);
+24          }
+25
+26          private static void printSubset(int[] subset, int length) {
+27              System.out.print(&quot;{ &quot;);
+28              for (int i = 0; i &lt; length; i++) {
+29                  if (subset[i] != 0) {
+30                      System.out.print(subset[i] + &quot; &quot;);
+31                  }
+32              }
+33              System.out.println(&quot;}&quot;);
+34          }
+35      }
+36</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/22/Subsets.java">Src/22/Subsets.java</a></p>
+
+<p style="margin-top: 1em">This program produces the
+following output:</p>
+
+<pre style="margin-top: 1em">% java Subsets
+{ }
+{ 3 }
+{ 2 }
+{ 2 3 }
+{ 1 }
+{ 1 3 }
+{ 1 2 }
+{ 1 2 3 }</pre>
+
+
+<p style="margin-top: 1em">Unfortunately the reverse output
+is the desired output.</p>
+
+<p style="margin-top: 1em"><b>Your Work:</b></p>
+
+<p style="margin-top: 1em">Your work is to understand the
+generated algorithm and the change it so that it produces
+the desired outcome. A correct solution produces the
+following output:</p>
+
+<pre style="margin-top: 1em">% java SubsetsReverse
+{ 1 2 3 }
+{ 1 2 }
+{ 1 3 }
+{ 1 }
+{ 2 3 }
+{ 2 }
+{ 3 }
+{ }</pre>
+
+
+<p style="margin-top: 1em">The change requires only the
+modification of 2 lines of code. In other words you can only
+modify 2 and only 2 lines of code.</p>
+
+<p style="margin-top: 1em"><b>Requirements:</b></p>
+
+<p style="margin-top: 1em">&bull; You have to name your
+file <i>SubsetsReverse.java</i>.</p>
+
+<p style="margin-top: 1em">&bull; You can only modify 2
+(two) lines of code.</p>
+
+<p style="margin-top: 1em">Your output does not have to be
+identical to mine, but similar.</p>
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">&bull; Design your algorithms on
+paper.</p>
+
+<p style="margin-top: 1em">&bull; Analyze the given
+algorithm very well.</p>
+
+<p style="margin-top: 1em">&bull; Run your modified
+algorithm on paper</p>
+
+<p style="margin-top: 1em">&bull; Only if you are sure it
+works, implement it</p>
+<hr size=4>
