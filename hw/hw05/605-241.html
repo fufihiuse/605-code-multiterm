@@ -1,0 +1,179 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 23 10:32:32 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-241.html</title>
+
+</head>
+
+
+<b><font size="+1">25.2. Homework 5.2 (10 Points)</font>
+<a name="25.2. Homework 5.2 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Designing a
+Class</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">Design and implement a version
+similar to the
+<a href="https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/String.html">String class.</a>
+Different to the String class the Strings of you
+implementation must be mutable. You cannot use any
+functionality of the String Class, besides length and
+charAt. You have decide which methods, or variables have to
+be instance or class methods/variables.</p>
+
+<p style="margin-top: 1em">Name your class: MyString.java.
+You class must at least implement the following:</p>
+
+
+<p align="center" style="margin-top: 1em"><img src="https://www.cs.rit.edu/~hpb/Lectures/2241/605/605/60530.png" alt="Image 605/60530.png"></p>
+
+<p style="margin-top: 1em"><b>Your Work:</b></p>
+
+<p style="margin-top: 1em">You have to design and implement
+the class MyString.</p>
+
+<p style="margin-top: 1em">An example of the execution of a
+program is below:</p>
+
+<pre style="margin-top: 1em">        public static void main(String args[] )       {
+                MyString aMystring = new MyString(&quot;aaa&quot;);
+                MyString bMystring = new MyString(&quot;aba&quot;);
+                MyString cMystring = new MyString(&quot;aba&quot;);
+                System.out.println(aMystring);
+                System.out.println(aMystring.equals(&quot;aaa&quot;));
+                System.out.println(aMystring.equals(&quot;baa&quot;));
+                System.out.println(aMystring.equals(bMystring));
+                System.out.println(aMystring.equals(aMystring));
+                System.out.println(aMystring.replace(new MyString(&quot;tt&quot;)) );
+                System.out.println(aMystring.concat(new MyString(&quot;xtt&quot;)) );
+                System.out.println(&quot;--- &quot; + cMystring.indexOf(&rsquo;a&rsquo;) );
+                System.out.println(&quot;--- &quot; + cMystring.indexOf(&rsquo;a&rsquo;) );
+                System.out.println(&quot;--- &quot; + cMystring.indexOf(&rsquo;a&rsquo;) );
+                System.out.println(&quot;--- &quot; + cMystring.indexOf(&rsquo;a&rsquo;) );</pre>
+
+
+<p style="margin-top: 1em">results in:</p>
+
+<pre style="margin-top: 1em">aaa/-1/3
+true
+false
+false
+true
+tt/-1/4
+xtxtt/-1/5
+--- 0
+--- 2
+--- -1
+--- -1</pre>
+
+
+<p style="margin-top: 1em"><b>Idea for a Solution:</b></p>
+
+<p style="margin-top: 1em">I suggest you think about the
+problems before you type.</p>
+
+<p style="margin-top: 1em"><b>Requirements:</b></p>
+
+<p style="margin-top: 1em">&bull; You have to name your
+file <i>MyString.java</i>.</p>
+
+<p style="margin-top: 1em">&bull; You can use the
+functionality of the String class, but no other class.</p>
+
+<p style="margin-top: 1em">&bull; You should use as many
+classes you think are resonable.</p>
+
+<p style="margin-top: 1em">&bull; You should access
+restriction as much as possible.</p>
+
+<p style="margin-top: 1em">&bull; You should use class or
+instance methods/varibales as you think is reasonable.</p>
+
+<p style="margin-top: 1em">Your output does not have to be
+identical to mine, but similar.</p>
+
+<p style="margin-top: 1em"><b>Submission:</b></p>
+
+<p style="margin-top: 1em">You have to submit a text file
+for each parts of the hw (1, 2, 3) named
+&rsquo;addition.txt&rsquo; with the following
+information:</p>
+
+<p style="margin-top: 1em">&bull; Describe the main problem
+you saw.</p>
+
+<p style="margin-top: 1em">&bull; Describe the main idea
+behind your solution.</p>
+
+<p style="margin-top: 1em">&bull; Add comment to the code
+if you made assumption about the write-up of the hw.</p>
+
+<p style="margin-top: 1em">&bull; Descripe your test cases,
+if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe the edge cases
+you tested, if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe all ways your
+program can be executed.</p>
+
+<p style="margin-top: 1em">&bull; You need to disclose if
+you have used generative AI. In other words, you have to
+identify code wich was generated by generative AI. Failing
+to do so will result in a &rsquo;F&rsquo; grade for the
+course.</p>
+
+<p style="margin-top: 1em">Utilize myCourses for file
+submissions, and note that each team is allowed only one
+submission. Your solutions should be submitted in a
+compressed jar file format and containing the java classes
+and associated files. Here&rsquo;s an example of how to
+create and compress such a file:</p>
+
+<pre style="margin-top: 1em">% jar cvf h1.jar Celtic.class Celtic.java addition.txt
+added manifest
+adding: Celtic.class(in = 1989) (out= 1113)(deflated 44%)
+adding: Celtic.java(in = 2650) (out= 943)(deflated 64%)
+adding: addition.txt(in = 4639) (out= 1998)(deflated 56%)
+% gzip -fv h1.jar
+h1.jar:         3.1% -- replaced with h1.jar.gz
+   #  -f --force           force overwriting &amp; compress links
+   #  -v --verbose         print extra statistics</pre>
+
+
+<p style="margin-top: 1em">Please ensure that the suffix of
+your file matches the specified format. The file should have
+a prefix &rsquo;h&rsquo; followed by the number of the
+homework. For instance, if you are submitting the solution
+for homework 5, the file name has to be h5.jar.</p>
+
+<p style="margin-top: 1em"><b>You will receive 0 points for
+your submission, if you use a format different than
+jar.</b></p>
+<hr size=4>

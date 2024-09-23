@@ -1,4 +1,4 @@
-package classes.patterns;// read: https://docs.oracle.com/javase/tutorial/essential/regex/quant.html
+package patterns2;// read: https://docs.oracle.com/javase/tutorial/essential/regex/quant.html
 import java.util.regex.Pattern;
 
 public class PatternQuestionsSol {

@@ -1,4 +1,4 @@
-package classes.patterns;
+package patterns2;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -7,7 +7,7 @@ public class PatternExample {
 
 	public static void main(String[] args) {
 		long maxCount = 3;
-		String text[] = { "dog", "Fog", "Dog", "xy9ye", "a mug"  };
+		String[] text = { "dog", "Fog", "Dog", "xy9ye", "a mug"  };
 		String patternDefinition = "dog|[Da]?\\s[um]+g|[^D]og|.*([A-Za-z])[0-9]\\1.*";
 
 		// example with named capturing group
