@@ -27,13 +27,14 @@ public class B2 extends A2
         A2 obj = new B2(); //implicit upcasting
 //        ((B2) obj).bMethod();
 //        obj.bMethod();
+
 //        //downcasting
-        B2 obj2 = (B2) obj;
+//        B2 obj2 = (B2) obj;
 //        obj2.bMethod();
 
         //field hiding
-        System.out.println(obj.value);
-        System.out.println(obj2.value);
+//        System.out.println(obj.value);
+//        System.out.println(obj2.value);
 
     }
 }
