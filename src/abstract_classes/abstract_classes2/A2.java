@@ -9,5 +9,6 @@ public class A2
 
     public A2() { methodOne(); }
 
-    public void methodOne() { System.out.print("A"); }
+    public void methodOne() {
+        System.out.print("A"); }
 }
