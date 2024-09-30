@@ -1,0 +1,338 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 30 09:39:04 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-244.html</title>
+
+</head>
+
+
+<b><font size="+1">26.1. Homework 6.1 (10 Points)</font>
+<a name="26.1. Homework 6.1 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Understanding
+of Interfaces and Casting.</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">Explain the class hierarchy of
+the following classes:</p>
+
+<p style="margin-top: 1em">Class 1:</p>
+
+<pre style="margin-top: 1em"> 1      public class A {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;A = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInAOnly() {
+15              System.out.println(&quot;A:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/A.java">Src/26/A.java</a></p>
+
+<p style="margin-top: 1em">Class 2:</p>
+
+<pre style="margin-top: 1em"> 1      public class B extends A {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;B = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInBOnly() {
+15              System.out.println(&quot;B:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/B.java">Src/26/B.java</a></p>
+
+<p style="margin-top: 1em">Class 3:</p>
+
+<pre style="margin-top: 1em"> 1      public class BB extends A {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;BB = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInCOnly() {
+15              System.out.println(&quot;BB:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/BB.java">Src/26/BB.java</a></p>
+
+<p style="margin-top: 1em">Class 4:</p>
+
+<pre style="margin-top: 1em"> 1      public class BBB extends A {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;BBB = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInBBBOnly() {
+15              System.out.println(&quot;BBB:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/BBB.java">Src/26/BBB.java</a></p>
+
+<p style="margin-top: 1em">Class 5:</p>
+
+<pre style="margin-top: 1em"> 1      public class C extends B {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;C = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInBOnly() {
+15              System.out.println(&quot;C:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/C.java">Src/26/C.java</a></p>
+
+<p style="margin-top: 1em">Class 6:</p>
+
+<pre style="margin-top: 1em"> 1      public class CBB extends BB {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;CBB = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInCBBOnly() {
+15              System.out.println(&quot;CBB:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/CBB.java">Src/26/CBB.java</a></p>
+
+<p style="margin-top: 1em">Class 7:</p>
+
+<pre style="margin-top: 1em"> 1      public class CC extends B {
+ 2
+ 3        int aInt       = 4;
+ 4
+ 5        public String toString() {
+ 6              return &quot;CC = &quot;  + aInt;
+ 7        }
+ 8        public void setTheValue(int aInt)    {
+ 9              this.aInt = aInt;
+10        }
+11        public int getTheValue()    {
+12              return aInt;
+13        }
+14        public void methodInCCOnly() {
+15              System.out.println(&quot;CC:methodInAOnly&quot;);
+16        }
+17      }
+18</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/CC.java">Src/26/CC.java</a></p>
+
+<p style="margin-top: 1em">Class 1:</p>
+
+<pre style="margin-top: 1em"> 1      public class Casting {
+ 2
+ 3        public static void test1()    {
+ 4              C aC = new C();
+ 5              B aB = aC;
+ 6              A aA = aC;
+ 7              aC.setTheValue(5);
+ 8              aB.aInt = 6;
+ 9              System.out.println(aC);
+10              System.out.println(aB.aInt);
+11              System.out.println(aC.getTheValue());
+12        }
+13        public static void test2()    {
+14              CC aCC = new CC();
+15              B  aB  = aCC;
+16              A  aA  = aB;
+17              aB.methodInAOnly();
+18              aB.methodInBOnly();
+19              aCC.methodInCCOnly();
+20        }
+21        public static void test3()    {
+22              CBB aCBB = new CBB();
+23              BB  aBB  = aCBB;
+24              A  aA  = aCBB;
+25        }
+26        public static void test4()    {
+27              B aB = new B();
+28              // B  aB  = aB;
+29              A  aA  = aB;
+30              // aA.methodInCOnly();
+31              CBB aCBB = new CBB();
+32              // ab = aCBB;
+33        }
+34        public static void main(String[] args )       {
+35
+36              test1();
+37              test2();
+38              test3();
+39              test4();
+40        }
+41      }</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/Casting.java">Src/26/Casting.java</a></p>
+
+<p style="margin-top: 1em"><b>Explanation:</b></p>
+
+<p style="margin-top: 1em">The objective of this hw is to
+understand class hierarchies.</p>
+
+<p style="margin-top: 1em"><b>Your Work:</b></p>
+
+<p style="margin-top: 1em">Explain what is happening when
+this code executes. The lines which are commented out will
+not compile. Why?</p>
+
+<p style="margin-top: 1em"><b>Requirements:</b></p>
+
+<p style="margin-top: 1em"><b>Submission:</b></p>
+
+<p style="margin-top: 1em">You have to submit a text file
+for each parts of the hw (1, 2, 3) named
+&rsquo;addition.txt&rsquo; with the following
+information:</p>
+
+<p style="margin-top: 1em">&bull; Describe the main problem
+you saw.</p>
+
+<p style="margin-top: 1em">&bull; Describe the main idea
+behind your solution.</p>
+
+<p style="margin-top: 1em">&bull; Add comment to the code
+if you made assumption about the write-up of the hw.</p>
+
+<p style="margin-top: 1em">&bull; Descripe your test cases,
+if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe the edge cases
+you tested, if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe all ways your
+program can be executed.</p>
+
+<p style="margin-top: 1em">&bull; You need to disclose if
+you have used generative AI. In other words, you have to
+identify code wich was generated by generative AI. Failing
+to do so will result in a &rsquo;F&rsquo; grade for the
+course.</p>
+
+<p style="margin-top: 1em">Utilize myCourses for file
+submissions, and note that each team is allowed only one
+submission. Your solutions should be submitted in a
+compressed jar file format and containing the java classes
+and associated files. Here&rsquo;s an example of how to
+create and compress such a file:</p>
+
+<pre style="margin-top: 1em">% jar cvf h1.jar Celtic.class Celtic.java addition.txt
+added manifest
+adding: Celtic.class(in = 1989) (out= 1113)(deflated 44%)
+adding: Celtic.java(in = 2650) (out= 943)(deflated 64%)
+adding: addition.txt(in = 4639) (out= 1998)(deflated 56%)
+% gzip -fv h1.jar
+h1.jar:         3.1% -- replaced with h1.jar.gz
+   #  -f --force           force overwriting &amp; compress links
+   #  -v --verbose         print extra statistics</pre>
+
+
+<p style="margin-top: 1em">Please ensure that the suffix of
+your file matches the specified format. The file should have
+a prefix &rsquo;h&rsquo; followed by the number of the
+homework. For instance, if you are submitting the solution
+for homework 5, the file name has to be h5.jar.</p>
+
+<p style="margin-top: 1em"><b>You will receive 0 points for
+your submission, if you use a format different than
+jar.</b></p>
+<hr size=4>

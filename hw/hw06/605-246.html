@@ -1,0 +1,189 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 30 09:39:04 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-246.html</title>
+
+</head>
+
+
+<b><font size="+1">26.3. Homework 6.3 (10 Points)</font>
+<a name="26.3. Homework 6.3 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em">ChatGPT Was asked to write a
+class which is using an abstract class to work with 2-D
+objects. The result was:</p>
+
+<pre style="margin-top: 1em"> 1      // Abstract class Shape
+ 2      abstract class Shape {
+ 3          // Abstract methods
+ 4          abstract double area();
+ 5          abstract double perimeter();
+ 6
+ 7          // A concrete method (optional, not abstract)
+ 8          public void display() {
+ 9              System.out.println(&quot;This is a shape.&quot;);
+10          }
+11      }
+12
+13      // Circle class extending Shape
+14      class Circle extends Shape {
+15          private double radius;
+16
+17          // Constructor
+18          public Circle(double radius) {
+19              this.radius = radius;
+20          }
+21
+22          // Implementing abstract methods
+23          @Override
+24          double area() {
+25              return Math.PI * radius * radius;
+26          }
+27
+28          @Override
+29          double perimeter() {
+30              return 2 * Math.PI * radius;
+31          }
+32      }
+33
+34      // Rectangle class extending Shape
+35      class Rectangle extends Shape {
+36          private double length;
+37          private double width;
+38
+39          // Constructor
+40          public Rectangle(double length, double width) {
+41              this.length = length;
+42              this.width = width;
+43          }
+44
+45          // Implementing abstract methods
+46          @Override
+47          double area() {
+48              return length * width;
+49          }
+50
+51          @Override
+52          double perimeter() {
+53              return 2 * (length + width);
+54          }
+55      }
+56
+57      // Main class to test the program
+58      public class Main {
+59          public static void main(String[] args) {
+60              // Create instances of Circle and Rectangle
+61              Shape circle = new Circle(5);
+62              Shape rectangle = new Rectangle(4, 6);
+63
+64              // Display circle information
+65              System.out.println(&quot;Circle Area: &quot; + circle.area());
+66              System.out.println(&quot;Circle Perimeter: &quot; + circle.perimeter());
+67
+68              // Display rectangle information
+69              System.out.println(&quot;Rectangle Area: &quot; + rectangle.area());
+70              System.out.println(&quot;Rectangle Perimeter: &quot; + rectangle.perimeter());
+71          }
+72      }
+73</pre>
+
+
+<p style="margin-top: 1em">Source Code:
+<a href="https://www.cs.rit.edu/~hpb/Lectures/2241/605/Src/26/Main.java">Src/26/Main.java</a></p>
+
+<p style="margin-top: 1em">Unfortunately this class is not
+vey well designed and additionally it should be changed to
+describe 3-D objects, like a</p>
+
+<p style="margin-top: 1em">&bull; Sphere</p>
+
+<p style="margin-top: 1em">&bull; Cuboid</p>
+
+<p style="margin-top: 1em">&bull; Triangular prism</p>
+
+<p style="margin-top: 1em">&bull; Rectangular prism</p>
+
+<p style="margin-top: 1em">&bull; Cone</p>
+
+<p style="margin-top: 1em">Additionally it should be
+possible to store these object in the storage environment
+from 26.2. One storage object for one shape of course.</p>
+
+<p style="margin-top: 1em"><b>Your Work:</b></p>
+
+<p style="margin-top: 1em">Improve on the original code and
+add code so such it can be stored.</p>
+
+<p style="margin-top: 1em"><b>Submission:</b></p>
+
+<p style="margin-top: 1em">You have to submit a text file
+for each parts of the hw (1, 2, 3) named
+&rsquo;addition.txt&rsquo; with the following
+information:</p>
+
+<p style="margin-top: 1em">&bull; Describe the main problem
+you saw.</p>
+
+<p style="margin-top: 1em">&bull; Describe the main idea
+behind your solution.</p>
+
+<p style="margin-top: 1em">&bull; Add comment to the code
+if you made assumption about the write-up of the hw.</p>
+
+<p style="margin-top: 1em">&bull; Descripe your test cases,
+if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe the edge cases
+you tested, if applicable.</p>
+
+<p style="margin-top: 1em">&bull; Describe all ways your
+program can be executed.</p>
+
+<p style="margin-top: 1em">&bull; You need to disclose if
+you have used generative AI. In other words, you have to
+identify code wich was generated by generative AI. Failing
+to do so will result in a &rsquo;F&rsquo; grade for the
+course.</p>
+
+<p style="margin-top: 1em">Utilize myCourses for file
+submissions, and note that each team is allowed only one
+submission. Your solutions should be submitted in a
+compressed jar file format and containing the java classes
+and associated files. Here&rsquo;s an example of how to
+create and compress such a file:</p>
+
+<pre style="margin-top: 1em">% jar cvf h1.jar Celtic.class Celtic.java addition.txt
+added manifest
+adding: Celtic.class(in = 1989) (out= 1113)(deflated 44%)
+adding: Celtic.java(in = 2650) (out= 943)(deflated 64%)
+adding: addition.txt(in = 4639) (out= 1998)(deflated 56%)
+% gzip -fv h1.jar
+h1.jar:         3.1% -- replaced with h1.jar.gz
+   #  -f --force           force overwriting &amp; compress links
+   #  -v --verbose         print extra statistics</pre>
+
+
+<p style="margin-top: 1em">Please ensure that the suffix of
+your file matches the specified format. The file should have
+a prefix &rsquo;h&rsquo; followed by the number of the
+homework. For instance, if you are submitting the solution
+for homework 5, the file name has to be h5.jar.</p>
+
+<p style="margin-top: 1em"><b>You will receive 0 points for
+your submission, if you use a format different than
+jar.</b></p>
+<hr size=4>
