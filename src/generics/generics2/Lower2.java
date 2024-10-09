@@ -1,6 +1,6 @@
 // lower bound for variable type: javac will assume the
 
-package classes.generics;
+package generics.generics2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class Lower2 {
 //        https://docs.oracle.com/javase/tutorial/java/generics/subtyping.html
 
         // unbounded variable types (java allows them, but you should not use it)
-        List<? extends B> list2 = new ArrayList<B>();
+        List<? extends B> list2 = new ArrayList<>();
 //        list2.add( new B() ); // curiously, java does not see a B instance as a fit candidate!
         // that's because the compiler type capture can not determine the type here
         // dont use unbounded wildcard for local variable types, compiler will not capture the type B in this case.

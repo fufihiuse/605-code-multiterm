@@ -1,3 +1,5 @@
+package abstract_classes.interfaces_vs_abstract_classes;
+
 abstract public class SortedStorage {
 
 	private class Node 	{

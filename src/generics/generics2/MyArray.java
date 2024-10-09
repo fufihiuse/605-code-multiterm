@@ -1,6 +1,6 @@
 // this is how you should NOT use generics
 
-package classes.generics;
+package generics.generics2;
 
 import java.util.Arrays;
  
@@ -29,6 +29,7 @@ class MyArray<E> {
 
     public static void main(String[] args){
         final int length = 5;
+        MyArray[] arr = new MyArray[2];
         MyArray<Integer> intArray = new MyArray<Integer>(length);
         for (int i = 0; i < length; i++)
             intArray.set(i, i * 2);

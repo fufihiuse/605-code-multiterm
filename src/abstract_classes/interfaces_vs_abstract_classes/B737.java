@@ -1,3 +1,5 @@
+package abstract_classes.interfaces_vs_abstract_classes;
+
 public class B737 extends Boeing implements Warrantable{
     int numberOfEngines = 4;
     final String vehicleType = "airplane";

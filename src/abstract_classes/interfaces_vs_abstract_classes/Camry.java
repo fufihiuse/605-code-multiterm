@@ -1,3 +1,5 @@
+package abstract_classes.interfaces_vs_abstract_classes;
+
 public class Camry extends Toyota implements Warrantable, Priceable {
     String brandName = "toyota";
 

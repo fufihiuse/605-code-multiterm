@@ -6,9 +6,9 @@ import java.util.List;
 // inheritance: area ->  square -> cube -> brick
 class LowerBound {
     public static void main(String[] args) {
-        List<Cube>  listOfCube = new LinkedList<Cube>();
-        List<Brick>   listOfBrick  = new LinkedList<Brick>();
-        List<Square>   listOfSquare  = new LinkedList<Square>();
+        List<Cube> listOfCube = new LinkedList<Cube>();
+        List<Brick> listOfBrick  = new LinkedList<Brick>();
+        List<Square> listOfSquare  = new LinkedList<Square>();
 
         listOfCube.add( new Cube(1) );
         listOfBrick.add( new Brick(1, 2, 3) );

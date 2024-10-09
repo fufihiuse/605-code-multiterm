@@ -1,3 +1,5 @@
+package abstract_classes.interfaces_vs_abstract_classes;
+
 public class TestVehicles {
     static public void main (String ...args) {
         Camry myCamry = new Camry();
