@@ -4,26 +4,26 @@ package generics.generics2;
 
 import java.util.LinkedList;
 import java.util.List;
-public class UpperBoundExample<T extends Cube> {
+public class VariablesUpperBound<T extends Cube> {
 
     T theThing;
 
-    public UpperBoundExample(T theThing)  {
+    public VariablesUpperBound(T theThing)  {
 	this.theThing = theThing;
     }
     public static void main(String[] args)	{
 	    // UpperBoundExample<Square> aSquare = new UpperBoundExample<Square>(new Square());
-	    UpperBoundExample<Cube>   aCube   = new UpperBoundExample<Cube>(new Cube());
-	    UpperBoundExample<Brick>  aBrick  = new UpperBoundExample<Brick>(new Brick());
+	    VariablesUpperBound<Cube> aCube   = new VariablesUpperBound<Cube>(new Cube());
+	    VariablesUpperBound<Brick> aBrick  = new VariablesUpperBound<Brick>(new Brick());
 						// linked list op UpperBoundExample->Brick
-	    List<UpperBoundExample<Brick>> aList = new LinkedList<>();
+	    List<VariablesUpperBound<Brick>> aList = new LinkedList<>();
 						// linked list op UpperBoundExample->Square
-	    List<UpperBoundExample<Cube>> bList = new LinkedList<UpperBoundExample<Cube>>();
-	    List<UpperBoundExample<? extends Cube>> cList = new LinkedList<>();
-	    aList.add( new UpperBoundExample<Brick>(new Brick() ) );
-	    bList.add( new UpperBoundExample<Cube>(new Cube() ) );
+	    List<VariablesUpperBound<Cube>> bList = new LinkedList<VariablesUpperBound<Cube>>();
+	    List<VariablesUpperBound<? extends Cube>> cList = new LinkedList<>();
+	    aList.add( new VariablesUpperBound<Brick>(new Brick() ) );
+	    bList.add( new VariablesUpperBound<Cube>(new Cube() ) );
 //	    					 cList.add( new UpperBoundExample<Square>(new Square() ) );
-	    cList.add( new UpperBoundExample<Brick>(new Brick() ) );
+	    cList.add( new VariablesUpperBound<Brick>(new Brick() ) );
 
 //	    cList.add( new UpperBoundExample<Square>(new Square() ) );
 //UpperBoundExample.java:26: error: incompatible types: UpperBoundExample<Square> cannot be converted to UpperBoundExample<? extends Cube>

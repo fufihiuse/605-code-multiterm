@@ -2,13 +2,13 @@
 // in this case we can see the warning with the -Xlint javac option
 // also notice that in practice during runtime T will become Object
 
-package classes.generics;
+package generics.generics2;
 
 import java.lang.reflect.Array;
 
-public class MyVector1<T> {
+public class MyReflectArray<T> {
 	T[] data = null;
-	public MyVector1( int size ) {
+	public MyReflectArray(int size ) {
 		 data = (T[])new Object[size];
 //		 data = new T[size];
 //		data = (T[])getArray( new Object().getClass(), size );
@@ -32,7 +32,7 @@ public class MyVector1<T> {
 	    return arr;
 	}
 	public static void main(String args[]) {
-		MyVector1<String> aMyVector1 = new MyVector1<String>(11);
+		MyReflectArray<String> aMyVector1 = new MyReflectArray<String>(11);
 		aMyVector1.set(0, "a");
 		System.out.println("aMyVector1.get(0): " + aMyVector1.get(0));
 
