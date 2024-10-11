@@ -32,7 +32,7 @@ class Fruit<K, V> {
 
 public class GenericMethod_2 {
 	public static void main(String[] args)	{
-		Fruit<Double, String> p1 = new Fruit<Double, String>(1.23, "apple");
+		Fruit<Double, String> p1 = new Fruit<>(1.23, "apple");
 		Fruit<Double, String> p2 = new Fruit<Double, String>(3.21, "pear");
 		boolean same1 = Compare.<Double, String>compare(p1, p2);
 		boolean same2 = Compare.compare(p1, p2);

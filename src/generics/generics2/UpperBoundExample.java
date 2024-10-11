@@ -22,7 +22,7 @@ public class UpperBoundExample<T extends Cube> {
 	    List<UpperBoundExample<? extends Cube>> cList = new LinkedList<>();
 	    aList.add( new UpperBoundExample<Brick>(new Brick() ) );
 	    bList.add( new UpperBoundExample<Cube>(new Cube() ) );
-	    					// cList.add( new UpperBoundExample<Square>(new Square() ) );
+//	    					 cList.add( new UpperBoundExample<Square>(new Square() ) );
 	    cList.add( new UpperBoundExample<Brick>(new Brick() ) );
 
 //	    cList.add( new UpperBoundExample<Square>(new Square() ) );
