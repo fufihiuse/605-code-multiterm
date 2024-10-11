@@ -2,7 +2,7 @@ package generics.generics2;
 
 import java.util.*;
 
-public class WildCard {
+public class Unbound2 {
 
     public static void printCollection_2(Collection<?> c) {
         Collection obj  = c;
