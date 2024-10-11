@@ -12,7 +12,7 @@ public class VariablesUpperBound<T extends Cube> {
 	this.theThing = theThing;
     }
     public static void main(String[] args)	{
-	    // UpperBoundExample<Square> aSquare = new UpperBoundExample<Square>(new Square());
+	    // VariablesUpperBound<Square> aSquare = new VariablesUpperBound<Square>(new Square());
 	    VariablesUpperBound<Cube> aCube   = new VariablesUpperBound<Cube>(new Cube());
 	    VariablesUpperBound<Brick> aBrick  = new VariablesUpperBound<Brick>(new Brick());
 						// linked list op UpperBoundExample->Brick

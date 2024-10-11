@@ -8,6 +8,7 @@ import java.util.List;
 class A2 {}
 class B extends A2 {}
 class C extends B {}
+// A -> B -> C
 
 public class VariablesLowerAndUpperBounds {
     static <T extends C> void upperCheck(T something) {}
@@ -41,7 +42,7 @@ public class VariablesLowerAndUpperBounds {
 //        https://docs.oracle.com/javase/tutorial/java/generics/subtyping.html
 
         // bounded variable types (java allows them, but you should be careful!!!!)
-        List<? extends B> list2 = new ArrayList<>();
+        List<? extends B> list2 = new ArrayList<B>();
 //        list2.add( new B() ); // curiously, java does not see a B instance as a fit candidate!
         // that's because the compiler type capture can not determine the type here
         // dont use bounded wildcard for local variable types, compiler will not capture the type B in this case.

@@ -14,7 +14,7 @@ class AA extends A implements I1, I2 	{
     public    void i2()  {}
 } 
 
-class MultipleB2<T extends AA & I1 & I2> {
+class MultipleB2<T extends A & I1 & I2> {
     void test(T t) { 	
         t.a();
         t.i1();
