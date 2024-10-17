@@ -14,7 +14,7 @@ class MyArray<E> {
     }
 
     E get(int i) {
-        @SuppressWarnings("unchecked")
+//        @SuppressWarnings("unchecked")
         final E e = (E)objArray[i];
         return e;
     }

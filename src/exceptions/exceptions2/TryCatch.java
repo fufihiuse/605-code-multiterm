@@ -15,11 +15,11 @@ public class TryCatch {
 //			e.printStackTrace();
 			System.out.println(1);
 		} finally {
-//			int x = 1/0;
+			int x = 1/0;
 			System.out.println(2);
 			++i;
 			return 0;
-		}
+        }
 	} catch (Exception e) {
 		int x = 1/0;
 		e.printStackTrace();
