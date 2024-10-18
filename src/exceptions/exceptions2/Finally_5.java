@@ -10,7 +10,7 @@ public class Finally_5 {
 				try {
 					System.out.println("" + intArray[1]);
 					System.out.println("Exception 0 ");
-				} catch(ArithmeticException e) {
+				} catch(IndexOutOfBoundsException e) {
 					System.out.println("Exception 1 ");
 				}
 			} catch(Exception e){

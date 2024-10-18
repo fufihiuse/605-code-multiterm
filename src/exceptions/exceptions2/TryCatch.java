@@ -19,7 +19,7 @@ public class TryCatch {
 			System.out.println(2);
 			++i;
 			return 0;
-        }
+		}
 	} catch (Exception e) {
 		int x = 1/0;
 		e.printStackTrace();
