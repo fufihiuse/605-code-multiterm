@@ -20,4 +20,8 @@ public class CheckedPerson {
         this.age = age;
         this.name = name;
     }
+
+    public static void main(String[] args) throws AgeException {
+        new CheckedPerson("Someone", -1);
+    }
 }
