@@ -53,15 +53,17 @@ a version of the UNIX command
 <p style="margin-top: 1em">Your implementation has to
 support:</p>
 
-<p style="margin-top: 1em">&bull; -l print the newline
-counts</p>
+<p style="margin-top: 1em">&bull; -l does not print the newline
+count</p>
 
-<p style="margin-top: 1em">&bull; -c print the byte
-counts</p>
+<p style="margin-top: 1em">&bull; -w does not print the word
+    count</p>
 
-<p style="margin-top: 1em">&bull; -m print the character
-counts</p>
-
+<p style="margin-top: 1em">&bull; -c does not print the character
+        count</p>
+        
+<p style="margin-top: 1em">&bull; -L does not print the number of character of the longest line in the input</p>
+    
 <p style="margin-top: 1em">&bull; - the input file is
 stdin</p>
 
@@ -69,7 +71,7 @@ stdin</p>
 and arguments given set the flag(s) to false.</p>
 
 <p style="margin-top: 1em">The syntax for using the java
-<i>wc</i> version is: java Wc [-c] [-l] [-m]
+<i>wc</i> version is: java Wc [-l] [-w] [-c] [-L]
 [fileName|-]</p>
 
 <p style="margin-top: 1em">A fileName == &rsquo;-&rsquo;
@@ -90,17 +92,23 @@ discussed in classes</p>
 Try-with-resource A test produces the following output:</p>
 
 <pre style="margin-top: 1em">          javac -Xlint    Wc.java
-          java Wc x.txt
-              2   4   12  5   x.txt
-          java Wc -w x.txt
-              2   12  5   x.txt
-          java Wc -c x.txt
-              2   4   5   x.txt
-          java Wc -l x.txt
-              4   12  5   x.txt
-          java Wc -
-          a
-          ^D      1   1   2   1</pre>
+    % cat x.txt
+    123 456
+    78 90
+    X
+    % java Wc x.txt
+        3   5   16  7   x.txt
+    % java Wc -w x.txt
+        3   16  7   x.txt
+    % java Wc -c x.txt
+        3   5   7   x.txt
+    % java Wc -L x.txt
+        3   5   16  x.txt
+    % java Wc -l -c -w -L x.txt
+        x.txt
+    % java Wc -c -
+    123456
+    ^D      1   1   6   -</pre>
 
 
 <p style="margin-top: 1em">Your output does not have to be
