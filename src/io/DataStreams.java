@@ -21,7 +21,7 @@ public class DataStreams {
 //            System.out.println(in.readDouble());
 //            System.out.println(in.readBoolean());
 
-            for (int i=0; i<"example of data streams".length(); i++)
+            for (int i=0; i<2*"example of data streams".length(); i++)
                 System.out.print(in.readBoolean());
 //            for (int i=0; i<"example of data streams".length(); i++)
 //                System.out.print(in.readChar());
