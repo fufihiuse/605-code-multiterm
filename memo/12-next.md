@@ -1,14 +1,4 @@
 
-# threads-intro
-
-stopped at slide 18
-
-
-# threads-intro
-
-review
-synchronization
-
 # threads-main
 
 whole slideset
