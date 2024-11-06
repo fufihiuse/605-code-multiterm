@@ -1,0 +1,158 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Nov  6 10:43:08 2024 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>605-449.html</title>
+
+</head>
+
+
+<b><font size="+1">31.2. Homework 11.2 (10 Points)</font>
+<a name="31.2. Homework 11.2 (10 Points)"></a>
+</b>
+
+
+<p style="margin-top: 1em"><b>Objective:</b> Working with
+synchronized Threads</p>
+
+<p style="margin-top: 1em"><b>Grading:</b> <br>
+Correctness: You can lose up to 40% if your solution is not
+correct <br>
+Quality: You can lose up to 80% if your solution is poorly
+designed <br>
+Testing: You can lose up to 50% if your solution is not well
+tested <br>
+Explanation: You can lose up to 100% if your solution if you
+can not explain your solution during the grading session</p>
+
+<p style="margin-top: 1em"><b>Homework Description:</b></p>
+
+<p style="margin-top: 1em">The objective is to work with
+synchronized threads.</p>
+
+<p style="margin-top: 1em">The following homework is
+inspired by the following movie clip:
+<a href="https://youtu.be/YzaWAEhFWpw">Pebble from my hand.</a></p>
+
+<p style="margin-top: 1em">A master is surrounded by his
+<i>n</i> students. The master will put a blue marble on the
+to of a pole. All students are around this pole and have the
+identical probability to snatch the marble from the top of
+the pole. The objective of the students is to grab a pebble
+from the pole.</p>
+
+<p style="margin-top: 1em">This is a fair game, meaning
+every student has the same chance to grab the pebble.</p>
+
+<p style="margin-top: 1em">In the middle of the circle,
+there is a light which can be seen by all students. A round
+is defined as:</p>
+
+<p style="margin-top: 1em">&bull; The teacher puts the
+marble on the top of the pole.</p>
+
+<p style="margin-top: 1em">&bull; The teacher presses a
+button, which will activate a mechanism to turn on a light.
+The time between pressing the button and the light turns on
+is random.</p>
+
+<p style="margin-top: 1em">&bull; All students will try to
+snatch the marble after the light turns on.</p>
+
+<p style="margin-top: 1em">&bull; The pebble will end up in
+one of the student&rsquo;s hands.</p>
+
+<p style="margin-top: 1em">&bull; The students puts the
+marble in the students bag.</p>
+
+<p style="margin-top: 1em">There are many rounds, because
+the master want to test the students endurance. After all
+rounds have been completed the teacher ask each student how
+many marbles they got. ,LP My program produces the following
+results:</p>
+<pre style="margin-top: 1em">% java PebbleFetchingCompetition -nStudents 2 -nRounds 3
+Master: This is round 1
+Master: Put the marble on top of the pole.
+Master: Pressed the button to activate the mechanism.
+    student 0 snatched the marble  from the top of the pole.
+
+Master: This is round 2
+Master: Put the marble on top of the pole.
+Master: Pressed the button to activate the mechanism.
+    student 0 snatched the marble  from the top of the pole.
+
+Master: This is round 3
+Master: Put the marble on top of the pole.
+Master: Pressed the button to activate the mechanism.
+    student 1 snatched the marble  from the top of the pole.
+
+
+
+Final Count
+    student 0   grabbed so many:        2 marbles
+    student 1   grabbed so many:        1 marbles
+
+All marbles are accounted for: true.
+
+
+% javac PebbleFetchingCompetition.java
+time java PebbleFetchingCompetition -nStudents 1000 -nRounds 2000 -quiet
+       91.36 real        12.67 user       247.36 sys</pre>
+
+
+<p style="margin-top: 1em"><b>Requirements:</b></p>
+
+<p style="margin-top: 1em">&bull; You have to use
+synchronized blocks or methods to solve the problem.</p>
+
+<p style="margin-top: 1em">&bull; All threads that are
+trying to get the pebble must have executed o.wait() before
+o.notifyAll() is executed.</p>
+
+<p style="margin-top: 1em">&bull; You can not use a busy
+loop.</p>
+
+<p style="margin-top: 1em">&bull; The game has to be fair.
+You must be able to explain why your solution is fair for
+all.</p>
+
+<p style="margin-top: 1em">&bull; You must verify via code
+that all pebble are acounted for.</p>
+
+<p style="margin-top: 1em">&bull; Your program must be able
+to parse the following command line arguments:</p>
+
+<pre style="margin-top: 1em">-nStudents n # so many students are taking part in the game
+-nRounds n  # so many rounds are played, in other words so many pebbles will be used
+-quiet      # the output is minimized</pre>
+
+
+<p style="margin-top: 1em">An execution of my code looks
+like this:</p>
+
+<pre style="margin-top: 1em">% java PebbleFetchingCompetition -nPlayers 4 -nRounds 20
+master      hold on to so many  3 marbles
+student 1   grabbed so many:        5 marbles
+student 2   grabbed so many:        3 marbles
+student 3   grabbed so many:        5 marbles
+student 4   grabbed so many:        4 marbles
+All marbles are accounted for is true.
+%  /usr/bin/time java PebbleFetchingCompetition -nPlayers 1000 -nRounds 2000 -quiet
+All marbles are accounted for is true.
+       98.37 real        14.81 user       241.58 sys</pre>
+
+
+<p style="margin-top: 1em">Your output does not have to be
+identical to mine, but similar.</p>
+<hr size=4>
