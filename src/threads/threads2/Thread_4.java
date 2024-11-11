@@ -35,7 +35,8 @@ public class Thread_4 extends Thread    {
         Thread_4 aT4_0 = new Thread_4("first",  aVector);
         Thread_4 aT4_1 = new Thread_4("second", aVector);
 
-        aT4_0.inProtected();
         aT4_0.start();
+
+        aT4_1.inProtected();
     }
 }
