@@ -1,36 +1,4 @@
 
-# threads-main
-
-whole slideset
-
-
-# threads
-
-- code review:
-  consumer_producer/
-  Consumer.java
-  Producer.java
-  ProducerConsumerTest.java
-  SafeBox.java
-
-
-# threads
-
-- code review:
-
-Thread_0.java
-Thread_4.java
-
-Thread_5b.java
-Thread_5c.java
-Thread_5d.java
-
-Thread_5e.java (wait and notify)
-
-
-# lambda
-
-- slides
 
 
 
@@ -78,31 +46,8 @@ WaitAndNotify.java
 DeadLock_4.java
 
 
-# pre-exam review
 
-# threads
-
-X.java (alternating)
-XX.java (will this fix the start in 0?)
-XXX.java (better)
-
-ZeroOneTwo.java (roundrobin)
-
-DeadLock.java (always deadlock?)
-
-Philosopher.java (will deadlock happen?)
-HpSimpleThreadPoolUse_1.java
-HpSimpleThreadPoolUse_2.java
-HpThreadPool.java
-HpWorker_1.java
-
-Thread_o1.java
-Thread_o2.java
-Thread_o3.java
-
-T_8.java
-
-
+# jcf
 
 
 
@@ -126,6 +71,11 @@ code examples
 
 
 
+# lambda
+
+- slides
+
+
 
 
 
@@ -133,3 +83,30 @@ code examples
 
 # instructor notes to self
 next topics: Threads, JCF, Networking, Lambda
+
+
+
+# pre-exam review
+
+# threads (repeated examples)
+
+X.java (alternating)
+XX.java (will this fix the start in 0?)
+XXX.java (better)
+
+ZeroOneTwo.java (roundrobin)
+
+DeadLock.java (always deadlock?)
+
+Philosopher.java (will deadlock happen?)
+HpSimpleThreadPoolUse_1.java
+HpSimpleThreadPoolUse_2.java
+HpThreadPool.java
+HpWorker_1.java
+
+Thread_o1.java
+Thread_o2.java
+Thread_o3.java
+
+T_8.java
+

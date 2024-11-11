@@ -9,9 +9,9 @@ public class Thread_0 extends Thread    {
     }
 
     public void run () {
-	System.err.println(info + " ---> ");
-	try { sleep(1000); } catch (  InterruptedException e ) { }
-	System.err.println(info + " <--- ");
+        System.err.println(info + " ---> ");
+        try { sleep(1000); } catch (  InterruptedException e ) { }
+        System.err.println(info + " <--- ");
     }
 
     public static void main (String args []) {
