@@ -49,24 +49,9 @@ DeadLock_4.java
 
 # jcf
 
+- time permitting, review slides
 
 
-
-# networking
-
-review on tcp/ip stack
-socket and serversocket classes (TCP)
-
-code examples
-- networking/sockets/echo/ EchoClient, EchoServer
-
-- multi-threaded servers
-- protocol as a separate class
-- datagram based communication with DatagramSocket and DatagramPacket
-- differences between Datagram and Socket based communication
-
-- networking/sockets/ KKClient, KKProtocol, KKServerMultiServer, KKMultiServerThread
-- networking/datagram/ QuoteClient, QuoteServer, QuoteServerThread
 
 
 
