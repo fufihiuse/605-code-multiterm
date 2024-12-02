@@ -1,11 +1,18 @@
 
 
+# jcf
+
+- review slides
+
+
+
+
 
 
 
 ... time permitting.....
 
-#threads
+# threads
 
 X.java (alternating)
 XX.java (will this fix the start in 0?)
@@ -44,13 +51,6 @@ WaitAndNotify_First.java
 WaitAndNotify.java
 
 DeadLock_4.java
-
-
-
-# jcf
-
-- time permitting, review slides
-
 
 
 
