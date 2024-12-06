@@ -1,12 +1,5 @@
 
 
-# jcf
-
-- review slides
-
-
-
-
 
 
 
@@ -14,16 +7,8 @@
 
 # threads
 
-X.java (alternating)
-XX.java (will this fix the start in 0?)
-XXX.java (better)
-
-
-ZeroOneTwo.java (roundrobin)
-
 DeadLock.java (always deadlock?)
 
-Philosopher.java (will deadlock happen?)
 
 HpSimpleThreadPoolUse_1.java
 HpSimpleThreadPoolUse_2.java
@@ -56,18 +41,10 @@ DeadLock_4.java
 
 
 
-# lambda
-
-- slides
 
 
 
 
-
-
-
-# instructor notes to self
-next topics: Threads, JCF, Networking, Lambda
 
 
 
