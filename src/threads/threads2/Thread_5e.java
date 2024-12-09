@@ -33,6 +33,3 @@ public class Thread_5e extends Thread    {
         new Thread_5e(0).start();
     }
 }
-
-
-
