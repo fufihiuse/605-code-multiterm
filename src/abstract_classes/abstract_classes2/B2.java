@@ -22,17 +22,17 @@ public class B2 extends A2
 
     public static void main ( String [] args ) {
         A2 obj = new B2(); //implicit upcasting
-        B2 ob5 = ((B2)obj);
-        ob5.methodOne();
+//        B2 ob5 = ((B2)obj); //downcasting
+//        ob5.methodOne();
 //        System.out.println();
 
 //        //downcasting
-        B2 obj2 = (B2) obj;
+//        B2 obj2 = (B2) obj;
 //        obj2.bMethod();
 
         //field hiding
-        System.out.println(obj.value);
-        System.out.println(obj2.value);
+//        System.out.println(obj.value);
+//        System.out.println(obj2.value);
 
     }
 }
