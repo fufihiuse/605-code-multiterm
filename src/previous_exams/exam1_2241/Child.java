@@ -20,4 +20,8 @@ public final class Child extends Parent implements Contract {
 
 // 1. In line with the comment //MARKED1, what happens if you change the access modifier to private?
 
+// Invalid modifier since Child can not access private parent members.
+
 // 2. What is the output of this code?
+
+// Helping (ps: return is not printed for scream())

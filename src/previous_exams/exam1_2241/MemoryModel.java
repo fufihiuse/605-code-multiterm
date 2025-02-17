@@ -28,3 +28,4 @@ public class MemoryModel {
 
 // 2. If the line marked with //MARKED is uncommented, what would happen?
 
+// nothing changes
