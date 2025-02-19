@@ -6,7 +6,7 @@ interface Contract {
 }
 
 abstract class Parent {
-    private String scream() { return "aaaaa"; } //MARKED1
+    public String scream() { return "aaaaa"; } //MARKED1
 }
 
 public final class Child extends Parent implements Contract {
