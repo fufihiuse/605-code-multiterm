@@ -45,7 +45,7 @@ public class GridPaneDemo extends Application {
         Scene scene = new Scene(gridPane);
         stage.setTitle("GridPaneDemo");
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 }
