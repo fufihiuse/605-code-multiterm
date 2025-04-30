@@ -29,7 +29,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package sockets.echo;
+package networking.sockets.echo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
