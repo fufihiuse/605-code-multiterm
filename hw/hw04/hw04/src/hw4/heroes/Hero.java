@@ -73,7 +73,7 @@ public abstract class Hero {
      * @param amount the amount to heal the hero by (capped at max health)
      */
     public void heal(int amount) {
-        System.out.println(name + "heals " + amount + "points");
+        System.out.println(name + " heals " + amount + " points");
         hitPoints = Math.min(hitPoints + amount, maxHitPoints);
     }
 

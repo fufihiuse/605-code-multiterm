@@ -32,7 +32,7 @@ public class Tank extends Hero {
     @Override
     public void takeDamage(int amount) {
         // Takes away amount blocked by shield
-        amount -= (int) (amount - (amount * defense));
+        amount -= (int) (amount * defense);
         super.takeDamage(amount);
     }
 }
