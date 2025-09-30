@@ -23,7 +23,7 @@ public class HeroStorm {
     }
 
     void play() {
-        while (dragonParty.numHeroes() > 0 || lionParty.numHeroes() > 0) {
+        while (dragonParty.numHeroes() > 0 && lionParty.numHeroes() > 0) {
             // Create Heroes
             Hero firstHero;
             Hero secondHero;
@@ -46,7 +46,7 @@ public class HeroStorm {
             }
 
             // Begin fight
-            System.out.println("*** " + firstHero.getName() + " vs " + secondHero.getName() + "!");
+            System.out.println("*** " + firstHero.getName() + " vs " + secondHero.getName() + "!\n");
 
             firstHero.attack(secondHero);
 
@@ -70,6 +70,9 @@ public class HeroStorm {
             }
             // Toggle who goes first
             dragonFirst = !dragonFirst;
+
+            // Print empty line for spacing
+            System.out.println();
         }
 
         if(dragonParty.numHeroes() > 0) {
