@@ -1,11 +1,10 @@
 /*
- * file: Heroes.java
+ * File Heroes.java
  */
 
 package hw4.heroes;
 
 import hw4.game.Team;
-import hw4.game.Team.*;
 
 /**
  * Public data about all the heroes including the roles and unique names
