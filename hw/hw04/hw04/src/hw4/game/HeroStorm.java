@@ -4,17 +4,26 @@ import hw4.game.HeroParty;
 import hw4.heroes.Hero;
 
 /**
- * the HeroStorm class controls the main operation of the program
+ * The HeroStorm class controls the main operation of the program
  * and includes the main method
  *
  * @author Jackson Majewski     jdm1631@rit.edu
  */
 public class HeroStorm {
+    /** The party for team Dragon */
     private final HeroParty dragonParty;
+    /** The party for team Lion */
     private final HeroParty lionParty;
+    /** The number of the current battle */
     private int battleNumber;
+    /** Toggle that tracks whether the dragon party goes first*/
     private boolean dragonFirst;
 
+    /**
+     * The constructor for the HeroStorm game
+     * @param dragonSeed the seed used to shuffle the dragon's team order
+     * @param lionSeed the seed used to shuffle the lion's team order
+     */
     public HeroStorm(int dragonSeed, int lionSeed) {
         dragonParty = new HeroParty(Team.DRAGON, dragonSeed);
         lionParty = new HeroParty(Team.LION, lionSeed);
@@ -22,6 +31,9 @@ public class HeroStorm {
         dragonFirst = true;
     }
 
+    /**
+     * The main gameplay loop for HeroStrom
+     */
     void play() {
         while (dragonParty.numHeroes() > 0 && lionParty.numHeroes() > 0) {
             // Create Heroes
@@ -85,7 +97,7 @@ public class HeroStorm {
     }
 
     /**
-     * The main method
+     * The main method, used to parse arguments and start the gameplay loop
      *
      * @param args dragon_seed_# and lion_seed_#
      */
