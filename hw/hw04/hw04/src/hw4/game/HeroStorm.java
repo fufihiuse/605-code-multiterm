@@ -62,7 +62,7 @@ public class HeroStorm {
 
             firstHero.attack(secondHero);
 
-            // If second hero is still alive, attack and re-add
+            // If second hero is still alive, attack and re-add, otherwise print death message
             if (!secondHero.hasFallen()) {
                 secondHero.attack(firstHero);
                 if (dragonFirst) {
@@ -71,14 +71,20 @@ public class HeroStorm {
                     dragonParty.addHero(secondHero);
                 }
             }
+            else {
+                System.out.println(secondHero.getName() + " has fallen!");
+            }
 
-            // Re-add first hero if they're still alive
+            // Re-add first hero if they're still alive, otherwise print death message
             if (!firstHero.hasFallen()) {
                 if (dragonFirst) {
                     dragonParty.addHero(firstHero);
                 } else {
                     lionParty.addHero(firstHero);
                 }
+            }
+            else {
+                System.out.println(firstHero.getName() + " has fallen!");
             }
             // Toggle who goes first
             dragonFirst = !dragonFirst;

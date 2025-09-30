@@ -83,14 +83,13 @@ public abstract class Hero {
      */
     public void takeDamage(int amount) {
         System.out.println(name + " takes " + amount + " damage");
-        hitPoints -= amount;
+        hitPoints = Math.max(hitPoints - amount, 0); // Ensures health won't go below 0
 
         if (hitPoints > 0) {
             return;
         }
 
         // If health drops to 0 or below
-        System.out.println(name + " has fallen!");
         hasFallen = true;
     }
 
