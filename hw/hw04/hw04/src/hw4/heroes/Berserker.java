@@ -6,6 +6,7 @@ import hw4.heroes.Heroes;
 /**
  * An extension of the Hero class for the Berserker role
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public class Berserker extends Hero {
 

@@ -5,6 +5,7 @@ import hw4.game.Team;
 /**
  * An extension of the Hero class for the Healer role
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public class Healer extends Hero {
     /** Amount of health Healer can restore to living allies (including itself) */

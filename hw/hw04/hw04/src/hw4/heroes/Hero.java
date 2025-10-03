@@ -6,6 +6,7 @@ import hw4.heroes.Heroes.Role;
 /**
  * The Hero abstract class, used to create different types of hero
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public abstract class Hero {
     /** The max health of the Hero */

@@ -1,12 +1,12 @@
 package hw4.heroes;
 
-import hw4.heroes.Hero;
 import hw4.game.Team;
 import java.util.List;
 
 /**
  * An interface used as a blueprint for Party
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public interface Party {
     /**

@@ -1,6 +1,5 @@
 package hw4.game;
 
-import hw4.game.HeroParty;
 import hw4.heroes.Hero;
 
 /**
@@ -8,6 +7,7 @@ import hw4.heroes.Hero;
  * and includes the main method
  *
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public class HeroStorm {
     /** The party for team Dragon */

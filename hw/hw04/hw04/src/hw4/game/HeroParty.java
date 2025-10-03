@@ -1,6 +1,5 @@
 package hw4.game;
 
-import hw4.heroes.Berserker;
 import hw4.heroes.Hero;
 import hw4.heroes.Heroes;
 import hw4.heroes.Party;
@@ -13,6 +12,7 @@ import java.util.Random;
 /**
  * HeroParty is an implementation of Party that tracks 3 heroes on the same team
  * @author Jackson Majewski     jdm1631@rit.edu
+ * @author Vrutant Chaudhari    vc2999@rit.edu
  */
 public class HeroParty implements Party {
     /** The team each party is assigned to */
