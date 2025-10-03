@@ -1,0 +1,55 @@
+  0 1 2 3 
+0 . . . .
+         
+1 . . . .
+         
+2 . . . .
+
+Turn: RED, Red: 0, Blue: 0 , Moves: 0
+
+RED's move...
+>   0 1 2 3 
+0 .-. . .
+         
+1 . . . .
+         
+2 . . . .
+
+Turn: BLUE, Red: 0, Blue: 0 , Moves: 1
+
+BLUE's move...
+> Invalid line!
+> Invalid line!
+>   0 1 2 3 
+0 .-.-. .
+         
+1 . . . .
+         
+2 . . . .
+
+Turn: RED, Red: 0, Blue: 0 , Moves: 2
+
+RED's move...
+>   0 1 2 3 
+0 .-.-. .
+        |
+1 . . . .
+         
+2 . . . .
+
+Turn: BLUE, Red: 0, Blue: 0 , Moves: 3
+
+BLUE's move...
+> Invalid line!
+>   0 1 2 3 
+0 .-.-. .
+        |
+1 . . . .
+        |
+2 . . . .
+
+Turn: RED, Red: 0, Blue: 0 , Moves: 4
+
+RED's move...
+> Invalid line!
+> 
